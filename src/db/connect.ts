@@ -6,7 +6,7 @@ export const connectToDb = async () => {
       .connect(process.env.MONGO_URI as string)
       .then(() => {
         console.log("Database connection has been established");
-        Promise.resolve();
+        resolve("Database connection has been established");
       })
       .catch((err) => reject(err));
   });
