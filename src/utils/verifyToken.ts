@@ -4,14 +4,6 @@ import { AccessForbiddenError } from "../errors/api-errors/AccessForbiddenError"
 import { NotAuthorizedError } from "../errors/api-errors/NotAuthorizedError";
 import { decodedUserToken } from "../interfaces/interfaces";
 
-declare global {
-  namespace Express {
-    interface Request {
-      user?: decodedUserToken;
-    }
-  }
-}
-
 export const verifyToken = (
   req: Request,
   res: Response,

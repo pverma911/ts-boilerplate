@@ -3,7 +3,12 @@ export interface UserModel {
   email: string;
   password: string;
   age: number;
-  role: Number;
+  role: number;
+}
+
+export interface TokenUser {
+  email: string;
+  role: number;
 }
 
 export interface decodedUserToken {
