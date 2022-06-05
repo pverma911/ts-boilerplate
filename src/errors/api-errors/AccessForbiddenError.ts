@@ -1,8 +1,9 @@
-class AccessForbiddenError extends Error {
-  statusCode: number;
+import { CustomApiError } from "./CustomApiError";
+
+class AccessForbiddenError extends CustomApiError {
+  statusCode = 403;
   constructor(message: string) {
     super(message);
-    this.statusCode = 403;
   }
 }
 

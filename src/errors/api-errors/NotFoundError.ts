@@ -1,8 +1,9 @@
-class NotFoundError extends Error {
-  statusCode: number;
+import { CustomApiError } from "./CustomApiError";
+
+class NotFoundError extends CustomApiError {
+  statusCode = 404;
   constructor(message: string) {
     super(message);
-    this.statusCode = 404;
   }
 }
 
